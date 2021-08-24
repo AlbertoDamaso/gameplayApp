@@ -1,17 +1,23 @@
 import React from "react";
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import { StatusBar, View, Text, Image } from "react-native";
 import { styles } from "./styles";
+
 import IllustraionImg from '../../assets/illustration.png';
-import Discord from '../../assets/discord.png';
+import { ButtonIcon } from '../../components/ButtonIcon';
 
 
 export function SignIn(){
     return(
-      
       <View style={styles.container}>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor="transparent"
+          translucent
+        />
         <Image 
           source={IllustraionImg}
           style={styles.image}
+          resizeMode="stretch"
         />
 
         <View style={styles.content}>
@@ -26,13 +32,10 @@ export function SignIn(){
             </Text>
         </View>
 
-            <TouchableOpacity style={styles.submitButton}>
-              <Image 
-                source={Discord}
-                style={styles.imageButton}
-              />
-              <Text style={styles.textButton}>Entre com Discord</Text>
-            </TouchableOpacity>
+        <ButtonIcon 
+          title="Entrar com Discord"
+          activeOpacity={0.7}
+        />
       </View>
     )
   }
