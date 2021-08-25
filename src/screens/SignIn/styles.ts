@@ -8,28 +8,29 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: theme.colors.background
   },
   image: {
     width: '100%',
   },
   content: {
-    width: '63%',
+    paddingHorizontal: 50,
     marginTop: -45
   },
   title: {
     fontSize: 40,
     marginBottom: 16,
     textAlign: 'center',
-    fontWeight: 'bold',
+    lineHeight: 40,
     color: theme.colors.heading, 
-    fontFamily: 'sans-serif-condensed'
+    fontFamily: theme.fonts.title700
   },
   text: {
     fontSize: 15,
     marginBottom: 48,
     textAlign:'center',
-    color: theme.colors.heading
+    lineHeight: 25,
+    color: theme.colors.heading,
+    fontFamily: theme.fonts.title500
   },
 
 

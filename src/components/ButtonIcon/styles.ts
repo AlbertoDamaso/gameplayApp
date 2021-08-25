@@ -9,8 +9,8 @@ submitButton:{
     alignItems: 'center',
     flexDirection: 'row',
     borderRadius: 8,
-    borderColor: theme.colors.brandPrimary,
-    backgroundColor: theme.colors.brandPrimary
+    borderColor: theme.colors.primary,
+    backgroundColor: theme.colors.primary
   },
   iconWrapper:{
     width: 56,
@@ -28,6 +28,7 @@ submitButton:{
     flex: 1,
     fontSize: 15,
     textAlign: "center",
-    color: theme.colors.heading
+    color: theme.colors.heading,
+    fontFamily: theme.fonts.text500
   }
 });
