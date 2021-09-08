@@ -10,6 +10,7 @@ export function AuthRoutes(){
         <AuthStack.Navigator 
             screenOptions={{
                 headerShown: false,
+                contentStyle: {backgroundColor: 'transparent'}
             }}
         >
             <AuthStack.Screen

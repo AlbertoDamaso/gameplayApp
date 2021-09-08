@@ -10,7 +10,15 @@ export const styles = StyleSheet.create({
         width: '100%',
         paddingHorizontal: 24,
         justifyContent: 'space-between',
+        flexDirection:'row',
         marginTop: getStatusBarHeight() + 26,
         marginBottom: 42
+    },
+    content: {
+        marginTop: 42,
+    },
+    matches: {
+        marginTop: 24,
+        marginLeft: 24
     }
 })

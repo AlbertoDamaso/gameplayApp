@@ -4,9 +4,15 @@ import { styles } from "./styles";
 
 import IllustraionImg from '../../assets/illustration.png';
 import { ButtonIcon } from '../../components/ButtonIcon';
-
+import { useNavigation  } from "@react-navigation/native";
 
 export function SignIn(){
+  const navigation = useNavigation();
+
+  function handleSingnIn(){
+    navigation.navigate('Home');//Pq no Type esta assim agr?
+  }
+
     return(
       <View style={styles.container}>
 
@@ -31,6 +37,7 @@ export function SignIn(){
         <ButtonIcon 
           title="Entrar com Discord"
           activeOpacity={0.7}
+          onPress={handleSingnIn}
         />
       </View>
     )
