@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import { View, FlatList } from 'react-native';
-import { styles } from "./styles";
+import { useNavigation  } from "@react-navigation/native";
 import { Profile } from "../../components/Profile";
 import { ButtonAdd } from "../../components/ButtonAdd";
-import { CategorySelect } from "../../components/CategorySelect";
 import { ListHeader } from "../../components/ListHeader";
 import { ListDivider } from "../../components/ListDivider";
 import { Appointment } from "../../components/Appointment";
+import { CategorySelect } from "../../components/CategorySelect";
+import { styles } from "./styles";
+
 
 export function Home(){
     const [category, setCategory] = useState('')
-
+    const navigation = useNavigation();
     const appointments = [
         {
             id: '1',
@@ -37,14 +39,22 @@ export function Home(){
             description: 'É hoje que vamos chegar ao challenger sem perder uma partida da m10'
         }        
     ]
+
     function handleCategorySelect(categoryId: string) {
         categoryId === category ? setCategory('') : setCategory(categoryId)
     }
+    function handleAppointmentDetails(){
+        navigation.navigate('AppointmentDetails')
+    }
+    function handleAppointmentCreate(){
+        navigation.navigate('AppointmentCreate')
+    }    
+
     return(
         <View>
             <View style={styles.header}>
                 <Profile/>
-                <ButtonAdd/>
+                <ButtonAdd onPress={handleAppointmentCreate}/>
             </View>
 
             <CategorySelect
@@ -64,7 +74,10 @@ export function Home(){
                     showsHorizontalScrollIndicator={false}
                     ItemSeparatorComponent={() => <ListDivider/>}
                     renderItem={({ item }) => (
-                        <Appointment data={item}/>
+                        <Appointment 
+                            data={item}
+                            onPress={handleAppointmentDetails}
+                        />
                     )}
                 />
             </View>

@@ -12,18 +12,6 @@ submitButton:{
     borderColor: theme.colors.primary,
     backgroundColor: theme.colors.primary
   },
-  iconWrapper:{
-    width: 56,
-    height: 56,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRightWidth: 1,  
-    borderRightColor: '#991F36',
-  },
-  imageButton: {
-    width: 24,
-    height: 18
-  },
   textButton: {
     flex: 1,
     fontSize: 15,

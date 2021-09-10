@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
-import { styles } from "./styles";
-
+import { useNavigation } from "@react-navigation/native";
 import IllustraionImg from '../../assets/illustration.png';
 import { ButtonIcon } from '../../components/ButtonIcon';
-import { useNavigation  } from "@react-navigation/native";
+import { styles } from "./styles";
+
 
 export function SignIn(){
   const navigation = useNavigation();
@@ -23,22 +23,21 @@ export function SignIn(){
         />
 
         <View style={styles.content}>
-            <Text style={styles.title}>
-              Conecte-se {'\n'}
-              e organize suas {'\n'}
-              jogatinas
-            </Text>
-            <Text style={styles.text}>
-              Crie grupos para jogar seus games{'\n'}
-              favoritos com seus amigos
-            </Text>
+          <Text style={styles.title}>
+            Conecte-se {'\n'}
+            e organize suas {'\n'}
+            jogatinas
+          </Text>
+          <Text style={styles.text}>
+            Crie grupos para jogar seus games{'\n'}
+            favoritos com seus amigos
+          </Text>
+          <ButtonIcon 
+            title="Entrar com Discord"
+            activeOpacity={0.7}
+            onPress={handleSingnIn}
+          />            
         </View>
-
-        <ButtonIcon 
-          title="Entrar com Discord"
-          activeOpacity={0.7}
-          onPress={handleSingnIn}
-        />
       </View>
     )
   }
