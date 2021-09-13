@@ -29,7 +29,8 @@ export const styles = StyleSheet.create({
         width: 64,
         height: 68,
         borderWidth: 1,
-        backgroundColor: theme.colors.secondary50,
+        backgroundColor: theme.colors.secondary40,
+        borderColor: theme.colors.secondary50,
         borderRadius: 8
     },
     selectBody: {

@@ -8,6 +8,14 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         alignSelf: 'center'
     },
+    guildIconContainer: {
+        width: 64,
+        height: 68,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 8,
+        marginRight: 20
+    },
     content: {
         flex: 1,
     },
