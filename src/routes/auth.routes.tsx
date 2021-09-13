@@ -5,15 +5,19 @@ import { SignIn } from "../screens/SignIn";
 import { AppointmentDetails } from '../screens/AppointmentDetails'
 import { AppointmentCreate } from '../screens/AppointmentCreate'
 
+const RootStack = createNativeStackNavigator();
 
-type RootStackParamList = {
-    SignIn: undefined,
-    Home: undefined,
-    AppointmentDetails: undefined,
-    AppointmentCreate: undefined
+declare global {
+    namespace ReactNavigation {
+        interface RootParamList{
+            SignIn: undefined,
+            Home: undefined,
+            AppointmentDetails: undefined,
+            AppointmentCreate: undefined
+        }
+    }
 }
 
-const RootStack = createNativeStackNavigator<RootStackParamList>();
 
 export function AuthRoutes(){
     return(

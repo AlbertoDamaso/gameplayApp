@@ -10,7 +10,7 @@ export function SignIn(){
   const navigation = useNavigation();
 
   function handleSingnIn(){
-    navigation.navigate('Home');//Pq no Type esta assim agr?
+    navigation.navigate('Home');
   }
 
     return(

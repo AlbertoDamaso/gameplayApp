@@ -27,6 +27,24 @@ export function Guilds({ handleGuildSelect }: Props){
             name: 'Mestre',
             icon: 'image.png',
             owner: true
+        },
+        {
+            id: '4',
+            name: 'Lendários',
+            icon: 'image.png',
+            owner: true
+        },
+        {
+            id: '5',
+            name: 'Lixo',
+            icon: 'image.png',
+            owner: false
+        },
+        {
+            id: '6',
+            name: 'Mestre',
+            icon: 'image.png',
+            owner: true
         }
     ]
 
@@ -36,8 +54,10 @@ export function Guilds({ handleGuildSelect }: Props){
             data={guilds}
             style={styles.guilds}
             keyExtractor={item => item.id}
-            ItemSeparatorComponent={() => <ListDivider/>}
+            ListHeaderComponent={() => <ListDivider isCentered/>}
+            ItemSeparatorComponent={() => <ListDivider isCentered/>}
             showsVerticalScrollIndicator={false}
+            contentContainerStyle={{paddingBottom: 68, paddingTop: 103}}
             renderItem={({ item }) => (
                 <Guild
                     data={item}
