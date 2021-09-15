@@ -1,4 +1,4 @@
-const REDIRECT_URI = 'https://auth.expo.io/@anonymous/gameplay-bf9ea97f-dac5-425c-bcad-49aef97418fa';//Arrumar aqui depois do almoço!!!
+const REDIRECT_URI = 'https://auth.expo.io/@anonymous/gameplay';
 const SCOPE = 'identify%20email%20connections%20guilds';
 const RESPONSE_TYPE = 'token';
 const CLIENT_ID = '887677554197155840';
