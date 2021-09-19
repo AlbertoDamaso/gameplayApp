@@ -17,8 +17,7 @@ declare global {
     }
 }
 
-
-export function AuthRoutes(){
+export function AppRoutes(){
     return(
         <RootStack.Navigator 
             screenOptions={{

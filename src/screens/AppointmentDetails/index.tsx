@@ -71,7 +71,7 @@ export function AppointmentDetails(){
           keyExtractor={item => item.id}
           style={styles.members}
           showsHorizontalScrollIndicator={false}
-          ItemSeparatorComponent={() => <ListDivider/>}
+          ItemSeparatorComponent={() => <ListDivider isCentered/>}
           renderItem={({ item }) => (
             <Member data={item}/>
           )}
