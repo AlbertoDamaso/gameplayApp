@@ -57,6 +57,7 @@ function AuthProvider({ children }: AuthProviderProps){
                     firstName,
                     token:params.access_token
                     });
+                    
             }
 
         } catch {
