@@ -2,10 +2,10 @@
   "expo": {
     "name": "gameplay",
     "slug": "gameplay",
+    "scheme": "gameplay",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "scheme": "gameplay",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -28,6 +28,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Conecte-se e organize suas jogatinas",
+    "githubUrl": "https://github.com/AlbertoDamaso/gameplayApp.git"
   }
 }
