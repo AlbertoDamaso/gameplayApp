@@ -40,6 +40,7 @@ function AuthProvider({ children }: AuthProviderProps){
         useProxy,
     })
 
+    
     async function signIn(){
         try {
             setLoading(true);
