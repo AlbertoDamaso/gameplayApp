@@ -34,17 +34,28 @@ export const AuthContext = createContext({} as AuthContextData);
 function AuthProvider({ children }: AuthProviderProps){
     const [user, setUser] = useState<User>({} as User)
     const [loading, setLoading] = useState(false);
+    const useProxy = true;
+    
+    // const redirectUri = AuthSession.makeRedirectUri({
+    //     useProxy,
+    // })
+
 
     async function signIn(){
         try {
             setLoading(true);
             
-            
             const authUrl = `${api.defaults.baseURL}/oauth2/authorize?client_id=${CLIENT_ID}
             &redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPE}`
 
+            // const authUrl = `${api.defaults.baseURL}/oauth2/authorize?client_id=${CLIENT_ID}
+            // &redirect_uri=${redirectUri}&response_type=${RESPONSE_TYPE}&scope=${SCOPE}`
+            console.log(REDIRECT_URI)
+            console.log(authUrl)
+
             const {type, params} = await AuthSession
             .startAsync({ authUrl }) as AuthorizationResponse
+            console.log(type, params)
 
             if(type === "success" && !params.error){
                 api.defaults.headers.authorization = `Bearer ${params.access_token}`;

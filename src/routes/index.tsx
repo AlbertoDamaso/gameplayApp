@@ -8,8 +8,8 @@ export function Routes(){
     const { user } = useAuth();
     return(
         <NavigationContainer>
-            {/* { user.id ? <AppRoutes/> : <SignIn/>} */}
-            <AppRoutes/>  
+            { user.id ? <AppRoutes/> : <SignIn/>}
+            {/* <AppRoutes/>   */}
         </NavigationContainer>
     )
 }
