@@ -1,25 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Fontisto } from '@expo/vector-icons';
-import { useRoute } from '@react-navigation/native';
+import { ImageBackground, Text, View, Alert, FlatList, Share, Platform} from 'react-native';
 import { BorderlessButton } from 'react-native-gesture-handler';
+import { useRoute } from '@react-navigation/native';
+import { Fontisto } from '@expo/vector-icons';
 import * as Linking from 'expo-linking';
-
-import {
-  ImageBackground,
-  Text,
-  View,
-  Alert,
-  FlatList,
-  Share,
-  Platform
-} from 'react-native';
-
 import BannerImg from '../../assets/banner.png';
-
-import { styles } from './styles';
 import { theme } from '../../global/styles/theme';
 import { api } from '../../services/api';
-
 import { AppointmentProps } from '../../components/Appointment';
 import { ListDivider } from '../../components/ListDivider';
 import { Background } from '../../components/Background';
@@ -28,6 +15,7 @@ import { ButtonIcon } from '../../components/ButtonIcon';
 import { Member, MemberProps } from '../../components/Member';
 import { Header } from '../../components/Header';
 import { Load } from '../../components/Load';
+import { styles } from './styles';
 
 type Params = {
   guildSelected: AppointmentProps
@@ -76,6 +64,7 @@ export function AppointmentDetails(){
   useEffect(() => {
     fetchGuildWidget();
   },[]);
+
   return (
     <Background>
       <Header 

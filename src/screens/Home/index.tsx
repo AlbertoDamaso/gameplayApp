@@ -2,7 +2,6 @@ import React, { useState, useCallback } from 'react';
 import { View, FlatList } from 'react-native';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
 import { CategorySelect } from '../../components/CategorySelect';
 import { Appointment, AppointmentProps } from '../../components/Appointment';
 import { ListDivider } from '../../components/ListDivider';
@@ -11,9 +10,8 @@ import { Background } from '../../components/Background';
 import { ButtonAdd } from '../../components/ButtonAdd';
 import { Profile } from '../../components/Profile';
 import { Load } from '../../components/Load';
-
-import { styles } from './styles';
 import { COLLECTION_APPOINTMENTS } from '../../config/database';
+import { styles } from './styles';
 
 export function Home() {
   const [category, setCategory] = useState('');
@@ -22,13 +20,12 @@ export function Home() {
 
   const navigation = useNavigation();
 
-
   function handleCategorySelect(categoryId: string) {
     categoryId === category ? setCategory('') : setCategory(categoryId);
   } 
   
   function handleAppointmentDetails(guildSelected: AppointmentProps) {
-    navigation.navigate('AppointmentDetails')//, { guildSelected });
+    navigation.navigate('AppointmentDetails', { guildSelected });
   } 
   
   function handleAppointmentCreate() {
