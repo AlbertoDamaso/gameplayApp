@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { View, Text, Image, Alert, ActivityIndicator } from "react-native";
 import IllustraionImg from '../../assets/illustration.png';
 import { ButtonIcon } from '../../components/ButtonIcon';
-import { useAuth } from "../../context/auth";
+import { useAuth } from "../../hooks/auth";
 import { theme } from "../../global/styles/theme";
 import { styles } from "./styles";
 
